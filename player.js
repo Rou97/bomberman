@@ -7,15 +7,14 @@ class Player{
         this.ctx = this.canvas.getContext('2d');
         this.x = x;
         this.y = y;
-        this.speed = 50;
+        this.speed = 0;
         this.direction = 0;
         this.lives = lives;
     };
 
-    update() {
-        // this.x = this.x + this.direction * this.speed;
-        //this.y = this.y + this.direction * this.speed;
-    };
+    // update() {
+    
+    // };
 
     draw() {
         this.ctx.fillStyle = "green";
@@ -37,13 +36,38 @@ class Player{
         }
     }
 
+    checkCollisions(tecla, wall) {
+        if(tecla === 1) {
+            if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x )  {
+                return true; 
+            }
+        }
+        if(tecla === 2) {
+            if ( this.y - 1  <  wall.y + wall.size && this.x < wall.x + wall.size && this.x + this.size > wall.x )  {
+                return true; 
+            }
+        }
+        if(tecla === 3){
+            if ( (this.x + 1) + this.size >  wall.x && this.y < wall.y + wall.size && this.y + this.size > wall.y ) {
+                return true; 
+            }
+        }
+
+        if(tecla === 4){
+            if ( this.x - 1  <  wall.x + wall.size && this.y < wall.y + wall.size && this.y + this.size > wall.y ) {
+                return true; 
+            }
+        }
+
+    }
+
     checkScreen() {
-        if(this.y - this.size/2 <= 0) {
-            this.direction = 1;
-        } else if (this.y + this.size/2 >= this.canvas.height)  {
-            this.direction = -1;
-        };
+        
     };
+
+    dropBomb() {
+
+    }
 
     loseLive() {
 

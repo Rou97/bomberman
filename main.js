@@ -41,34 +41,59 @@ const main = () => {
         const game = new Game(canvasElement);
         game.startLoop();
 
-        const setPlayerDirection = (event) => {
+
+        // if ((game.player.y - game.player.size/2 >= 0) || (game.player.y + game.player.size/2 <= game.player.canvas.height)){
+
+        // }
+
+        // if ((game.player.y - 1 < 0) || (game.player.y + 1 > game.player.canvas.height) || (game.player.x - 1 < 0) || (game.player.x + 1 > game.player.canvas.width)){
+                
+        // }
+
+        const playerActions = (event) => {
             let tecla = 0;
+            game.player.speed = 25;
+            let collision = false;
+
+            
+
             if(event.code === 'KeyS') {
                 tecla = 1;
-                game.player.changeDirection(tecla, game.player.speed);
+                collision = game.player.checkCollisions(tecla, game.wall);
+                if(!collision) {
+                    game.player.changeDirection(tecla, game.player.speed);
+                }
             }
             if(event.code === 'KeyW') {
                 tecla = 2;
-                game.player.changeDirection(tecla, game.player.speed);
+                collision = game.player.checkCollisions(tecla, game.wall);
+                if(!collision) {
+                    game.player.changeDirection(tecla, game.player.speed);
+                }
             }
             if(event.code === 'KeyD') {
                 tecla = 3;
-                game.player.changeDirection(tecla, game.player.speed);
+                collision = game.player.checkCollisions(tecla, game.wall);
+                if(!collision) {
+                    game.player.changeDirection(tecla, game.player.speed);
+                }
             }
             if(event.code === 'KeyA') {
                 tecla = 4;
-                game.player.changeDirection(tecla, game.player.speed);
+                collision = game.player.checkCollisions(tecla, game.wall);
+                if(!collision) {
+                    game.player.changeDirection(tecla, game.player.speed);
+                }
             }
             
+
+            if (event.code === 'Space') {
+                console.log('bomba');
+            }
             
-            // if (event.code === 'ArrowUp') {
-            //     game.player.setDirection(-1);
-            // } else if (event.code === 'ArrowDown') {
-            //     game.player.setDirection(1);
-            // }
         } 
 
-        document.addEventListener('keydown', setPlayerDirection);
+        document.addEventListener('keydown', playerActions);
 
     }
 
