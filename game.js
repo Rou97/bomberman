@@ -10,11 +10,14 @@ class Game{
 
     startLoop() {
 
+        this.player = new Player(this.canvas, 0, 0, 1);
+
         const loop = () => {
 
+            this.checkAllCollisions();
             this.updateCanvas();
             this.clearCanvas();
-            this.drawCAnvas();
+            this.drawCanvas();
             window.requestAnimationFrame(loop);
         }
 
@@ -22,16 +25,20 @@ class Game{
     }
 
     updateCanvas() {
-
+        this.player.update();
     };
 
     clearCanvas() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     };
 
-    drawCAnvas() {
-
+    drawCanvas() {
+        this.player.draw();
     };
+
+    checkAllCollisions() {
+        this.player.checkScreen();
+    }
 
 
 } 
