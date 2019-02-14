@@ -37,6 +37,7 @@ class Player{
     }
 
     checkCollisions(tecla, wall) {
+        //collisions with walls
         if(tecla === 1) {
             if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x )  {
                 return true; 
