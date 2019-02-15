@@ -71,6 +71,13 @@ const main = () => {
                     if(!collision) {
                         game.player.changeDirection(tecla, game.player.speed);
                     }
+
+                    for (let l of game.wall) {
+                        for (let e of l) {
+                        
+                        }
+                    }
+
                 }
 
                 if(event.code === 'KeyW') {
