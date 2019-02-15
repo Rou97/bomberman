@@ -16,7 +16,7 @@ class Game{
     startLoop() {
 
         //Players
-        this.player = new Player(this.canvas, 100, 100, 1);
+        this.player = new Player(this.canvas, 50, 50, 1);
 
         //wall
         for (let i = 0; i < 11; i++) {
