@@ -55,11 +55,11 @@ const main = () => {
             game.player.speed = 25;
             let collision = false;
 
-            game.wall.forEach(l => {
-                l.forEach(e => {
+            // game.wall.forEach(l => {
+            //     l.forEach(e => {
 
-                })
-            });
+            //     })
+            // });
                 
                 if(event.code === 'KeyS') {
                     tecla = 1;
