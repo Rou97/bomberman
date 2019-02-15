@@ -36,7 +36,7 @@ const main = () => {
         canvasElement.setAttribute('width', width);
         canvasElement.setAttribute('height', height);
 
-        //setTimeout(buildGameOver, 3000);
+        //setTimeout(buildGameOver, 3000); //condicion de derrota o victoria
 
         const game = new Game(canvasElement);
         game.startLoop();
@@ -88,6 +88,8 @@ const main = () => {
             
 
             if (event.code === 'Space') {
+                game.buildBomb();
+
                 console.log('bomba');
             }
             

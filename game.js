@@ -6,7 +6,8 @@ class Game{
         this.ctx = this.canvas.getContext('2d');
         this.player;
         this.wall;
-        this.enemies = [];
+        this.bomb;
+        this.bombs = [];
     };
 
     startLoop() {
@@ -38,14 +39,27 @@ class Game{
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     };
 
+    buildBomb() {
+        this.bomb = new Bomb(this.canvas, 250, 250);
+        this.bomb.isBomb = true;
+
+        setTimeout(this.bomb.explosion, 2000); 
+    }
+
     drawCanvas() {
         this.player.draw();
         this.wall.draw();
+        if(this.bomb) {
+            this.bomb.draw();
+        }
+        
     };
 
     checkAllCollisions() {
         this.player.checkScreen(); //no hace falta, posible reutilizacion
     }
+
+   
 
 
 } 
