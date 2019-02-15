@@ -34,6 +34,9 @@ class Game{
                 if (j === 10) {
                     this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
                 }
+                if((j%2) === 0 && (i%2) === 0) {
+                    this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
+                }
             }
         }
 
