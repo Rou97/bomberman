@@ -15,7 +15,7 @@ class Game{
         this.player = new Player(this.canvas, 0, 0, 1);
 
         //Walls
-        this.wall = new Wall(this.canvas, 50, 50);
+        this.wall = new Wall(this.canvas, 150, 150);
 
 
         const loop = () => {
