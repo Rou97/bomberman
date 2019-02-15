@@ -59,17 +59,22 @@ const main = () => {
 
             if(event.code === 'KeyS') {
                 tecla = 1;
+                console.log(collision);
                 collision = game.player.checkCollisions(tecla, game.wall);
                 if(!collision) {
+                    console.log(collision);
                     game.player.changeDirection(tecla, game.player.speed);
                 }
             }
             if(event.code === 'KeyW') {
                 tecla = 2;
+                console.log(collision);
                 collision = game.player.checkCollisions(tecla, game.wall);
                 if(!collision) {
+                    console.log(collision);
                     game.player.changeDirection(tecla, game.player.speed);
                 }
+                console.log(collision);
             }
             if(event.code === 'KeyD') {
                 tecla = 3;
@@ -89,6 +94,8 @@ const main = () => {
 
             if (event.code === 'Space') {
                 game.buildBomb();
+
+            
 
                 console.log('bomba');
             }

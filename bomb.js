@@ -16,10 +16,19 @@ class Bomb{
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 
-    explosion() {
+    explosion1() {
         this.explos = true;
-        console.log('explosion: ', this.explos);
-        this.size = 100;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x, this.y - 100);
+        
+    }
+    explosion2() {
+        this.explos = true;
+        console.log('explosion2: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x - 100, this.y);
+        
     }
 
 }

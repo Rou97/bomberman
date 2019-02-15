@@ -5,18 +5,39 @@ class Game{
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.player;
-        this.wall;
+        this.wall = [];
         this.bomb;
         this.bombs = [];
+        this.explosion1;
+        this.explosion2;
+        this.explosions;
     };
 
     startLoop() {
 
         //Players
-        this.player = new Player(this.canvas, 0, 0, 1);
+        this.player = new Player(this.canvas, 100, 100, 1);
 
-        //Walls
-        this.wall = new Wall(this.canvas, 150, 150);
+        //wall
+        for (let i = 0; i < 11; i++) {
+            this.wall[i] = [];
+            for (let j = 0; j < 11; j++) {
+                if (j === 0) {
+                    this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
+                }
+                if (i === 0) {
+                    this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
+                }
+                if (i === 10) {
+                    this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
+                } 
+                if (j === 10) {
+                    this.wall[i][j] = new Wall(this.canvas, i * 50, j * 50);
+                }
+            }
+        }
+
+        //this.wall = new Wall(this.canvas, 150, 150);
 
 
         const loop = () => {
@@ -40,17 +61,38 @@ class Game{
     };
 
     buildBomb() {
-        this.bomb = new Bomb(this.canvas, 250, 250);
+        this.bomb = new Bomb(this.canvas, this.player.x, this.player.y);
         this.bomb.isBomb = true;
 
-        setTimeout(this.bomb.explosion, 2000); 
+        setTimeout(() => {
+
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            delete this.bomb;
+            console.log(this.bomb);
+            console.log('esto ', JSON.stringify(this.explosion1));
+            console.log('lo otro ', JSON.stringify(this.explosion1));
+        }, 2000); //modificar
+
+
     }
 
     drawCanvas() {
         this.player.draw();
-        this.wall.draw();
+        //this.wall.draw();
+        this.wall.forEach(wallArray => {
+            wallArray.forEach(wall => {
+                wall.draw();
+            })
+        })
         if(this.bomb) {
             this.bomb.draw();
+        }
+        if(this.explosion1) {
+            this.explosion1.draw1();
+        }
+        if(this.explosion2) {
+            this.explosion2.draw2();
         }
         
     };
