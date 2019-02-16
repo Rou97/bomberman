@@ -63,20 +63,26 @@ const main = () => {
                 
                 if(event.code === 'KeyS') {
                     tecla = 1;
-                    game.wall.forEach(l => {
-                        l.forEach(e => {
+
+                    for (let l of game.wall) {
+                        for (let e of l) {
                             collision = game.player.checkCollisions(tecla, e);
-                        })
-                    });
+                            if (collision === true) {
+                                break;
+                            } 
+                        }
+                        if(!collision) {
+                            game.player.changeDirection(tecla, game.player.speed);
+                        }
+                        if (collision === true) {
+                            break;
+                        }
+                    }
+
                     if(!collision) {
                         game.player.changeDirection(tecla, game.player.speed);
                     }
 
-                    for (let l of game.wall) {
-                        for (let e of l) {
-                        
-                        }
-                    }
 
                 }
 
