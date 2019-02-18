@@ -5,6 +5,7 @@ class Game{
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.player;
+        this.player2;
         this.wall = [];
         this.bomb;
         this.bombs = [];
@@ -17,6 +18,7 @@ class Game{
 
         //Players
         this.player = new Player(this.canvas, 100, 50, 1);
+        this.player2 = new Player(this.canvas, 350, 450, 1);
 
         //wall
         for (let i = 0; i < 11; i++) {
@@ -45,7 +47,7 @@ class Game{
 
         const loop = () => {
 
-            this.checkAllCollisions();
+            //this.checkAllCollisions();
             // this.updateCanvas();
             this.clearCanvas();
             this.drawCanvas();
@@ -74,8 +76,9 @@ class Game{
             delete this.bomb;
             console.log(this.bomb);
             
+            //playerDamaged();            
+            
             //eliminar explosion
-
 
             setTimeout(() => {
                 delete this.explosion1;
@@ -85,7 +88,6 @@ class Game{
 
             }, 1000); //modificar
 
-            //this.explosion1.delete();
 
         }, 2000); //modificar
 
@@ -95,6 +97,7 @@ class Game{
 
     drawCanvas() {
         this.player.draw();
+        this.player2.draw();
         //this.wall.draw();
         this.wall.forEach(wallArray => {
             wallArray.forEach(wall => {
@@ -113,9 +116,9 @@ class Game{
         
     };
 
-    checkAllCollisions() {
-        this.player.checkScreen(); //no hace falta, posible reutilizacion
-    }
+    // checkAllCollisions() {
+    //     this.player.checkScreen(); //no hace falta, posible reutilizacion
+    // }
 
    
 

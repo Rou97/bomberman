@@ -55,56 +55,9 @@ const main = () => {
             game.player.speed = 25;
             let collision = false;
 
-            // game.wall.forEach(l => {
-            //     l.forEach(e => {
-
-            //     })
-            // });
-                
-                // if(event.code === 'KeyS') {
-                //     tecla = 1;
-
-                //     for (let l of game.wall) {
-                //         for (let e of l) {
-                //             if(e === undefined) {
-                //                 if(!collision) {
-                //                     game.player.changeDirection(tecla, game.player.speed);
-                //                 }
-                //                 continue;
-                //             }
-                //             console.log('e', e);
-                //             collision = game.player.checkCollisions(tecla, e);
-                //             if (collision === true) {
-                //                 break;
-                //             }
-                //         }
-
-                //         if(l === undefined) {
-                //             if(!collision) {
-                //                 game.player.changeDirection(tecla, game.player.speed);
-                //             }
-                //             continue;
-                //         }
-
-                //         if(!collision) {
-                //             game.player.changeDirection(tecla, game.player.speed);
-                //         }
-                //         if (collision === true) {
-                //             break;
-                //         }
-                //     }
-
-                //     // if(!collision) {
-                //     //     game.player.changeDirection(tecla, game.player.speed);
-                //     // }
-
-                //     console.log('x', game.player.x, 'y', game.player.y);
-                // }
-
-
-
                 if(event.code === 'KeyS') {
                     tecla = 1;
+
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
@@ -173,6 +126,8 @@ const main = () => {
         document.addEventListener('keyup', playerActions);
 
     }
+
+    
 
     const buildGameOver = () => {
         const gameOverScreen = buildDom(`

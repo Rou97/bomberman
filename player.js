@@ -42,6 +42,7 @@ class Player{
         // console.log(wall.x+' '+wall.y+' '+wall.size);
         // console.log(this.x+' '+this.y);
         //console.log(wall);
+        console.log(this.x, this.y);
         if(tecla === 1) {
             if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size < wall.y + wall.size )  {
                 return true; 
@@ -65,6 +66,11 @@ class Player{
         }
 
     }
+
+
+    
+
+
 
     checkScreen() {
         

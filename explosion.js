@@ -22,18 +22,4 @@ class Explosion {
         this.ctx.fillRect(this.x, this.y, this.size1 + 200, this.size2)
     }
 
-    delete() {
-        //eliminar explosion
-
-        setTimeout(() => {
-            delete game.explosion1;
-            delete game.explosion2;
-            console.log(game.explosion1);
-            console.log(game.explosion1);
-
-        }, 1000); //modificar
-    }
-
-    
-
 }
