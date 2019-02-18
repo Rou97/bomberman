@@ -16,18 +16,68 @@ class Bomb{
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 
+
     explosion1() {
         this.explos = true;
         console.log('explosion1: ', this.explos);
         //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
-        return new Explosion(this.canvas, this.x, this.y - 100);
+        return new Explosion(this.canvas, this.x, this.y);
         
     }
     explosion2() {
         this.explos = true;
         console.log('explosion2: ', this.explos);
         //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x - 50, this.y);
+        
+    }
+    explosion3() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x - 100, this.y);
+        
+    }
+    explosion4() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x + 50, this.y);
+        
+    }
+    explosion5() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x + 100, this.y);
+        
+    }
+    explosion6() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x, this.y - 50);
+        
+    }
+    explosion7() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x, this.y - 100);
+        
+    }
+    explosion8() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x, this.y + 50);
+        
+    }
+    explosion9() {
+        this.explos = true;
+        console.log('explosion1: ', this.explos);
+        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
+        return new Explosion(this.canvas, this.x, this.y + 100);
         
     }
 

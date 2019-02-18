@@ -2,8 +2,7 @@
 
 class Explosion {
     constructor(canvas, x, y,) {
-        this.size1 = 50;
-        this.size2 = 50;
+        this.size = 50;
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
         this.x = x;
@@ -14,12 +13,12 @@ class Explosion {
 
     draw1() {
         this.ctx.fillStyle = "orange";
-        this.ctx.fillRect(this.x, this.y, this.size1, this.size2 + 200)
+        this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 
-    draw2() {
-        this.ctx.fillStyle = "orange";
-        this.ctx.fillRect(this.x, this.y, this.size1 + 200, this.size2)
-    }
+    // draw2() {
+    //     this.ctx.fillStyle = "orange";
+    //     this.ctx.fillRect(this.x, this.y, this.size, this.size)
+    // }
 
 }

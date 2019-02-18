@@ -54,15 +54,32 @@ const main = () => {
             let tecla = 0;
             game.player.speed = 25;
             let collision = false;
-            let dead = false;
+            let dead1 = false;
+            let dead2 = false;
+            let dead3 = false;
+            let dead4 = false;
+            let dead5 = false;
+            let dead6 = false;
+            let dead7 = false;
+            let dead8 = false;
+            let dead9 = false;
 
                 if(event.code === 'KeyS') {
                     tecla = 1;
-                    dead = game.player.checkExplosion(tecla, game.explosion1);
-                    if(dead){
-                        console.log('MUUUUUUUERTOOOOOOO')
+                    
+                    dead1 = game.player.checkExplosion(tecla, game.explosion1);
+                    dead2 = game.player.checkExplosion(tecla, game.explosion2);
+                    dead3 = game.player.checkExplosion(tecla, game.explosion3);
+                    dead4 = game.player.checkExplosion(tecla, game.explosion4);
+                    dead5 = game.player.checkExplosion(tecla, game.explosion5);
+                    dead6 = game.player.checkExplosion(tecla, game.explosion6);
+                    dead7 = game.player.checkExplosion(tecla, game.explosion7);
+                    dead8 = game.player.checkExplosion(tecla, game.explosion8);
+                    dead9 = game.player.checkExplosion(tecla, game.explosion9);
+                    
+                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
                     }
-                    console.log('esta', dead);
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
