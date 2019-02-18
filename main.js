@@ -54,10 +54,15 @@ const main = () => {
             let tecla = 0;
             game.player.speed = 25;
             let collision = false;
+            let dead = false;
 
                 if(event.code === 'KeyS') {
                     tecla = 1;
-
+                    dead = game.player.checkExplosion(tecla, game.explosion1);
+                    if(dead){
+                        console.log('MUUUUUUUERTOOOOOOO')
+                    }
+                    console.log('esta', dead);
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
@@ -126,14 +131,12 @@ const main = () => {
         document.addEventListener('keyup', playerActions);
 
         const player2Actions = (event) => {
-            console.log(event.code);
             let tecla = 0;
             game.player2.speed = 25;
             let collision = false;
     
                 if(event.code === 'ArrowDown') {
                     tecla = 1;
-                    console.log('funciona');
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player2.checkCollisions(tecla, e);

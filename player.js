@@ -42,7 +42,7 @@ class Player{
         // console.log(wall.x+' '+wall.y+' '+wall.size);
         // console.log(this.x+' '+this.y);
         //console.log(wall);
-        console.log(this.x, this.y);
+        // console.log(this.x, this.y);
         if(tecla === 1) {
             if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size < wall.y + wall.size )  {
                 return true; 
@@ -64,6 +64,48 @@ class Player{
                 return true; 
             }
         }
+
+    }
+
+    checkExplosion(tecla, wall) {
+        //collisions with walls
+        // console.log(wall.x+' '+wall.y+' '+wall.size+' '+this.x+' '+this.y);
+        // console.log(wall.x+' '+wall.y+' '+wall.size);
+        // console.log(this.x+' '+this.y);
+        //console.log(wall);
+        // console.log(this.x, this.y);
+        console.log('dentro', wall);
+        if(wall === undefined) {
+            console.log('que noooooo');
+            return false;
+        }
+        if(tecla === 1) {
+                console.log('MMMMMMMMMMMMMMMMM');
+            if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size < wall.y + wall.size )  {
+                console.log('WWWWWWWWWWWWWWWWWWW');
+                return true; 
+            }
+        }
+        if(tecla === 2) {
+            if ( this.y - 1  <  wall.y + wall.size && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size > wall.y )  {
+                console.log('WWWWWWWWWWWWWWWWWWW');
+                return true; 
+            }
+        }
+        if(tecla === 3){ 
+            if ( (this.x + 1) + this.size >  wall.x && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x - 1) + this.size < wall.x + wall.size ) {
+                console.log('WWWWWWWWWWWWWWWWWWW');
+                return true; 
+            }
+        }
+
+        if(tecla === 4){
+            if ( this.x - 1  <  wall.x + wall.size && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x ) + this.size > wall.x  ) {
+                console.log('WWWWWWWWWWWWWWWWWWW');
+                return true; 
+            }
+        }
+        
 
     }
 
