@@ -73,9 +73,22 @@ class Game{
             this.explosion2 = this.bomb.explosion2();
             delete this.bomb;
             console.log(this.bomb);
-            console.log('esto ', JSON.stringify(this.explosion1));
-            console.log('lo otro ', JSON.stringify(this.explosion1));
+            
+            //eliminar explosion
+
+
+            setTimeout(() => {
+                delete this.explosion1;
+                delete this.explosion2;
+                console.log(this.explosion1);
+                console.log(this.explosion2);
+
+            }, 1000); //modificar
+
+            //this.explosion1.delete();
+
         }, 2000); //modificar
+
 
 
     }

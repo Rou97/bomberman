@@ -31,4 +31,29 @@ class Bomb{
         
     }
 
+    checkCollisions(tecla, wall) {
+        if(tecla === 1) {
+            if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size < wall.y + wall.size )  {
+                return true; 
+            }
+        }
+        if(tecla === 2) {
+            if ( this.y - 1  <  wall.y + wall.size && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size > wall.y )  {
+                return true; 
+            }
+        }
+        if(tecla === 3){ 
+            if ( (this.x + 1) + this.size >  wall.x && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x - 1) + this.size < wall.x + wall.size ) {
+                return true; 
+            }
+        }
+
+        if(tecla === 4){
+            if ( this.x - 1  <  wall.x + wall.size && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x ) + this.size > wall.x  ) {
+                return true; 
+            }
+        }
+
+    }
+
 }

@@ -61,36 +61,72 @@ const main = () => {
             //     })
             // });
                 
+                // if(event.code === 'KeyS') {
+                //     tecla = 1;
+
+                //     for (let l of game.wall) {
+                //         for (let e of l) {
+                //             if(e === undefined) {
+                //                 if(!collision) {
+                //                     game.player.changeDirection(tecla, game.player.speed);
+                //                 }
+                //                 continue;
+                //             }
+                //             console.log('e', e);
+                //             collision = game.player.checkCollisions(tecla, e);
+                //             if (collision === true) {
+                //                 break;
+                //             }
+                //         }
+
+                //         if(l === undefined) {
+                //             if(!collision) {
+                //                 game.player.changeDirection(tecla, game.player.speed);
+                //             }
+                //             continue;
+                //         }
+
+                //         if(!collision) {
+                //             game.player.changeDirection(tecla, game.player.speed);
+                //         }
+                //         if (collision === true) {
+                //             break;
+                //         }
+                //     }
+
+                //     // if(!collision) {
+                //     //     game.player.changeDirection(tecla, game.player.speed);
+                //     // }
+
+                //     console.log('x', game.player.x, 'y', game.player.y);
+                // }
+
+
+
                 if(event.code === 'KeyS') {
                     tecla = 1;
-
-                    for (let l of game.wall) {
-                        for (let e of l) {
+                    game.wall.forEach(l => {
+                        l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
-                            if (collision === true) {
-                                break;
-                            } 
-                        }
-                        if(!collision) {
-                            game.player.changeDirection(tecla, game.player.speed);
-                        }
-                        if (collision === true) {
-                            break;
-                        }
-                    }
-
+                            if(collision) {
+                                game.player.speed = 0;
+                            }
+                        })
+                    });
                     if(!collision) {
                         game.player.changeDirection(tecla, game.player.speed);
                     }
-
-
                 }
+
 
                 if(event.code === 'KeyW') {
                     tecla = 2;
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player.speed = 0;
+                            }
                         })
                     });
                     if(!collision) {
@@ -102,6 +138,9 @@ const main = () => {
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player.speed = 0;
+                            }
                         })
                     });
                     if(!collision) {
@@ -113,6 +152,9 @@ const main = () => {
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player.speed = 0;
+                            }
                         })
                     });
                     if(!collision) {
@@ -123,14 +165,12 @@ const main = () => {
             if (event.code === 'Space') {
                 game.buildBomb();
 
-            
-
                 console.log('bomba');
             }
             
         } 
 
-        document.addEventListener('keydown', playerActions);
+        document.addEventListener('keyup', playerActions);
 
     }
 
