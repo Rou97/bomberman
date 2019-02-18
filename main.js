@@ -50,6 +50,9 @@ const main = () => {
                 
         // }
 
+
+
+
         const playerActions = (event) => {
             let tecla = 0;
             game.player.speed = 25;
@@ -63,6 +66,15 @@ const main = () => {
             let dead7 = false;
             let dead8 = false;
             let dead9 = false;
+            let dead11 = false;
+            let dead12 = false;
+            let dead13 = false;
+            let dead14 = false;
+            let dead15 = false;
+            let dead16 = false;
+            let dead17 = false;
+            let dead18 = false;
+            let dead19 = false;
 
                 if(event.code === 'KeyS') {
                     tecla = 1;
@@ -76,10 +88,23 @@ const main = () => {
                     dead7 = game.player.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
                         buildSplashScreen();
                     }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
+                        buildSplashScreen();
+                    }
+
                     game.wall.forEach(l => {
                         l.forEach(e => {
                             collision = game.player.checkCollisions(tecla, e);
@@ -106,8 +131,20 @@ const main = () => {
                     dead7 = game.player.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -135,8 +172,20 @@ const main = () => {
                     dead7 = game.player.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -164,8 +213,20 @@ const main = () => {
                     dead7 = game.player.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -205,6 +266,15 @@ const main = () => {
             let dead7 = false;
             let dead8 = false;
             let dead9 = false;
+            let dead11 = false;
+            let dead12 = false;
+            let dead13 = false;
+            let dead14 = false;
+            let dead15 = false;
+            let dead16 = false;
+            let dead17 = false;
+            let dead18 = false;
+            let dead19 = false;
     
                 if(event.code === 'ArrowDown') {
                     tecla = 1;
@@ -218,8 +288,20 @@ const main = () => {
                     dead7 = game.player2.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player2.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player2.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -249,8 +331,20 @@ const main = () => {
                     dead7 = game.player2.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player2.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player2.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -278,8 +372,20 @@ const main = () => {
                     dead7 = game.player2.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player2.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player2.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 
@@ -307,8 +413,20 @@ const main = () => {
                     dead7 = game.player2.checkExplosion(tecla, game.explosion7);
                     dead8 = game.player2.checkExplosion(tecla, game.explosion8);
                     dead9 = game.player2.checkExplosion(tecla, game.explosion9);
+                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
+                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
+                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
+                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
+                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
+                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
+                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
+                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
+                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
                     
                     if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                        buildSplashScreen();
+                    }
+                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
                         buildSplashScreen();
                     }
 

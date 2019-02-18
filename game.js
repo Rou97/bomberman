@@ -19,7 +19,16 @@ class Game{
         this.explosion7;
         this.explosion8;
         this.explosion9;
-        this.explosions;
+        this.explosion11;
+        this.explosion12;
+        this.explosion13;
+        this.explosion14;
+        this.explosion15;
+        this.explosion16;
+        this.explosion17;
+        this.explosion18;
+        this.explosion19;
+        this.explosions = [];
     };
 
     startLoop() {
@@ -123,8 +132,15 @@ class Game{
 
         setTimeout(() => {
 
-            this.explosion3 = this.bomb2.explosion1();
-            this.explosion4 = this.bomb2.explosion2();
+            this.explosion11 = this.bomb2.explosion1();
+            this.explosion12 = this.bomb2.explosion2();
+            this.explosion13 = this.bomb2.explosion3();
+            this.explosion14 = this.bomb2.explosion4();
+            this.explosion15 = this.bomb2.explosion5();
+            this.explosion16 = this.bomb2.explosion6();
+            this.explosion17 = this.bomb2.explosion7();
+            this.explosion18 = this.bomb2.explosion8();
+            this.explosion19 = this.bomb2.explosion9();
             delete this.bomb2;
             console.log(this.bomb2);
             
@@ -133,8 +149,15 @@ class Game{
             //eliminar explosion
 
             setTimeout(() => {
-                delete this.explosion3;
-                delete this.explosion4;
+                delete this.explosion11;
+                delete this.explosion12;
+                delete this.explosion13;
+                delete this.explosion14;
+                delete this.explosion15;
+                delete this.explosion16;
+                delete this.explosion17;
+                delete this.explosion18;
+                delete this.explosion19;
                 console.log(this.explosion3);
                 console.log(this.explosion4);
 
@@ -186,6 +209,34 @@ class Game{
         }
         if(this.explosion9) {
             this.explosion9.draw1();
+        }
+
+        if(this.explosion11) {
+            this.explosion11.draw1();
+        }
+        if(this.explosion12) {
+            this.explosion12.draw1();
+        }
+        if(this.explosion13) {
+            this.explosion13.draw1();
+        }
+        if(this.explosion14) {
+            this.explosion14.draw1();
+        }
+        if(this.explosion15) {
+            this.explosion15.draw1();
+        }
+        if(this.explosion16) {
+            this.explosion16.draw1();
+        }
+        if(this.explosion17) {
+            this.explosion17.draw1();
+        }
+        if(this.explosion18) {
+            this.explosion18.draw1();
+        }
+        if(this.explosion19) {
+            this.explosion19.draw1();
         }
 
         
