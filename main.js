@@ -36,20 +36,9 @@ const main = () => {
         canvasElement.setAttribute('width', width);
         canvasElement.setAttribute('height', height);
 
-        //setTimeout(buildGameOver, 3000); //condicion de derrota o victoria
 
         const game = new Game(canvasElement);
         game.startLoop();
-
-
-        // if ((game.player.y - game.player.size/2 >= 0) || (game.player.y + game.player.size/2 <= game.player.canvas.height)){
-
-        // }
-
-        // if ((game.player.y - 1 < 0) || (game.player.y + 1 > game.player.canvas.height) || (game.player.x - 1 < 0) || (game.player.x + 1 > game.player.canvas.width)){
-                
-        // }
-
 
 
 

@@ -16,94 +16,79 @@ class Bomb{
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 
-
+    //Create the 9 explosions of each bomb
     explosion1() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x, this.y);
         
     }
     explosion2() {
-        this.explos = true;
-        console.log('explosion2: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x - 50, this.y);
         
     }
     explosion3() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x - 100, this.y);
         
     }
     explosion4() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x + 50, this.y);
         
     }
     explosion5() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x + 100, this.y);
         
     }
     explosion6() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x, this.y - 50);
         
     }
     explosion7() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x, this.y - 100);
         
     }
     explosion8() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x, this.y + 50);
         
     }
     explosion9() {
-        this.explos = true;
-        console.log('explosion1: ', this.explos);
-        //return [new Explosion(this.canvas, this.x, this.y - 50), new Explosion(this.canvas, this.x, this.y - 50)]
         return new Explosion(this.canvas, this.x, this.y + 100);
         
     }
 
-    // checkCollisions(tecla, wall) {
-    //     if(tecla === 1) {
-    //         if ( (this.y + 1) + this.size >  wall.y && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size < wall.y + wall.size )  {
-    //             return true; 
-    //         }
-    //     }
-    //     if(tecla === 2) {
-    //         if ( this.y - 1  <  wall.y + wall.size && this.x < wall.x + wall.size && this.x + this.size > wall.x && (this.y - 1) + this.size > wall.y )  {
-    //             return true; 
-    //         }
-    //     }
-    //     if(tecla === 3){ 
-    //         if ( (this.x + 1) + this.size >  wall.x && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x - 1) + this.size < wall.x + wall.size ) {
-    //             return true; 
-    //         }
-    //     }
-
-    //     if(tecla === 4){
-    //         if ( this.x - 1  <  wall.x + wall.size && this.y < wall.y + wall.size && this.y + this.size > wall.y && (this.x ) + this.size > wall.x  ) {
-    //             return true; 
-    //         }
-    //     }
-
-    // }
+    explosion11() {
+        return new Explosion(this.canvas, this.x, this.y);
+        
+    }
+    explosion12() {
+        return new Explosion(this.canvas, this.x - 50, this.y);
+        
+    }
+    explosion13() {
+        return new Explosion(this.canvas, this.x - 100, this.y);
+        
+    }
+    explosion14() {
+        return new Explosion(this.canvas, this.x + 50, this.y);
+        
+    }
+    explosion15() {
+        return new Explosion(this.canvas, this.x + 100, this.y);
+        
+    }
+    explosion16() {
+        return new Explosion(this.canvas, this.x, this.y - 50);
+        
+    }
+    explosion17() {
+        return new Explosion(this.canvas, this.x, this.y - 100);
+        
+    }
+    explosion18() {
+        return new Explosion(this.canvas, this.x, this.y + 50);
+        
+    }
+    explosion19() {
+        return new Explosion(this.canvas, this.x, this.y + 100);
+        
+    }
 
 }

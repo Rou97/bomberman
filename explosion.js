@@ -16,9 +16,5 @@ class Explosion {
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 
-    // draw2() {
-    //     this.ctx.fillStyle = "orange";
-    //     this.ctx.fillRect(this.x, this.y, this.size, this.size)
-    // }
 
 }
