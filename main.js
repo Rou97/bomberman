@@ -125,6 +125,81 @@ const main = () => {
 
         document.addEventListener('keyup', playerActions);
 
+        const player2Actions = (event) => {
+            let tecla = 0;
+            game.player2.speed = 25;
+            let collision = false;
+    
+                if(event.code === 'ArrowDown') {
+                    tecla = 1;
+                    console.log('funciona');
+                    game.wall.forEach(l => {
+                        l.forEach(e => {
+                            collision = game.player2.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player2.speed = 0;
+                            }
+                        })
+                    });
+                    if(!collision) {
+                        game.player2.changeDirection(tecla, game.player2.speed);
+                    }
+                }
+    
+    
+                if(event.code === 'ArrowUp') {
+                    tecla = 2;
+                    game.wall.forEach(l => {
+                        l.forEach(e => {
+                            collision = game.player2.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player2.speed = 0;
+                            }
+                        })
+                    });
+                    if(!collision) {
+                        game.player2.changeDirection(tecla, game.player2.speed);
+                    }
+                }
+                if(event.code === 'ArrowRight') {
+                    tecla = 3;
+                    game.wall.forEach(l => {
+                        l.forEach(e => {
+                            collision = game.player2.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player2.speed = 0;
+                            }
+                        })
+                    });
+                    if(!collision) {
+                        game.player2.changeDirection(tecla, game.player2.speed);
+                    }
+                }
+                if(event.code === 'ArrowLeft') {
+                    tecla = 4;
+                    game.wall.forEach(l => {
+                        l.forEach(e => {
+                            collision = game.player2.checkCollisions(tecla, e);
+                            if(collision) {
+                                game.player2.speed = 0;
+                            }
+                        })
+                    });
+                    if(!collision) {
+                        game.player2.changeDirection(tecla, game.player2.speed);
+                    }
+                }
+    
+            if (event.code === 'k') {
+                game.buildBomb();
+    
+                console.log('bomba2');
+            }
+            
+        } 
+    
+        document.addEventListener('keyup', player2Actions);
+
     }
 
     
