@@ -27,6 +27,7 @@ class Game{
         //Players
         this.player = new Player(this.canvas, 100, 50, 1);
         this.player2 = new Player(this.canvas, 350, 450, 1);
+        //this.player2 = new Player(this.canvas, 0, 0, 1);
 
         //wall
         for (let i = 0; i < 11; i++) {
