@@ -233,7 +233,9 @@ const main = () => {
                 }
 
             if (event.code === 'Space') {
-                game.buildBomb();
+                if(game.bomb === undefined || game.bomb1 === undefined){
+                    game.buildBomb();
+                }
 
                 console.log('bomba');
             }
@@ -433,7 +435,9 @@ const main = () => {
                 }
     
             if (event.code === 'Period') {
-                game.buildBomb2();
+                if(game.bomb2 === undefined || game.bomb3 === undefined){
+                    game.buildBomb2();
+                }
     
                 console.log('bomba2');
             }
