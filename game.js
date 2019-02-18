@@ -8,9 +8,12 @@ class Game{
         this.player2;
         this.wall = [];
         this.bomb;
+        this.bomb2;
         this.bombs = [];
         this.explosion1;
         this.explosion2;
+        this.explosion3;
+        this.explosion4;
         this.explosions;
     };
 
@@ -91,7 +94,33 @@ class Game{
 
         }, 2000); //modificar
 
+    }
 
+    buildBomb2() {
+        this.bomb2 = new Bomb(this.canvas, this.player2.x, this.player2.y);
+        this.bomb2.isBomb = true;
+
+        setTimeout(() => {
+
+            this.explosion3 = this.bomb2.explosion1();
+            this.explosion4 = this.bomb2.explosion2();
+            delete this.bomb2;
+            console.log(this.bomb2);
+            
+            //playerDamaged();            
+            
+            //eliminar explosion
+
+            setTimeout(() => {
+                delete this.explosion3;
+                delete this.explosion4;
+                console.log(this.explosion3);
+                console.log(this.explosion4);
+
+            }, 1000); //modificar
+
+
+        }, 2000); //modificar
 
     }
 
@@ -107,11 +136,20 @@ class Game{
         if(this.bomb) {
             this.bomb.draw();
         }
+        if(this.bomb2) {
+            this.bomb2.draw();
+        }
         if(this.explosion1) {
             this.explosion1.draw1();
         }
         if(this.explosion2) {
             this.explosion2.draw2();
+        }
+        if(this.explosion3) {
+            this.explosion3.draw1();
+        }
+        if(this.explosion4) {
+            this.explosion4.draw2();
         }
         
     };

@@ -126,6 +126,7 @@ const main = () => {
         document.addEventListener('keyup', playerActions);
 
         const player2Actions = (event) => {
+            console.log(event.code);
             let tecla = 0;
             game.player2.speed = 25;
             let collision = false;
@@ -190,8 +191,8 @@ const main = () => {
                     }
                 }
     
-            if (event.code === 'k') {
-                game.buildBomb();
+            if (event.code === 'Period') {
+                game.buildBomb2();
     
                 console.log('bomba2');
             }
