@@ -7,10 +7,6 @@ class Game{
         this.player;
         this.player2;
         this.wall = [];
-        this.bomb;
-        this.bomb1;
-        this.bomb2;
-        this.bomb3;
         this.player1Bombs = [];
         this.player2Bombs = [];
         this.explosion1;
@@ -22,7 +18,6 @@ class Game{
         this.explosion7;
         this.explosion8;
         this.explosion9;
-    
     };
 
     startLoop() {
@@ -31,10 +26,7 @@ class Game{
         this.player = new Player(this.canvas, 100, 50, 1);
         this.player2 = new Player(this.canvas, 350, 450, 1);
 
-        //Explosions
-        for(let i = 0; i<=0; i++) {
-            
-        }
+        
 
         //wall
         for (let i = 0; i < 11; i++) {
@@ -394,5 +386,17 @@ class Game{
         delete this.explosion7;
         delete this.explosion8;
         delete this.explosion9;
+    }
+
+    checkDead(player, tecla) {
+        if(player.checkExplosion(tecla, this.explosion1)) return true;
+        if(player.checkExplosion(tecla, this.explosion2)) return true;
+        if(player.checkExplosion(tecla, this.explosion3)) return true;
+        if(player.checkExplosion(tecla, this.explosion4)) return true;
+        if(player.checkExplosion(tecla, this.explosion5)) return true;
+        if(player.checkExplosion(tecla, this.explosion6)) return true;
+        if(player.checkExplosion(tecla, this.explosion7)) return true;
+        if(player.checkExplosion(tecla, this.explosion8)) return true;
+        if(player.checkExplosion(tecla, this.explosion9)) return true;
     }
 } 

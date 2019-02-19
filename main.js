@@ -46,62 +46,17 @@ const main = () => {
             let tecla = 0;
             game.player.speed = 50;
             let collision = false;
-            let dead =[];
-            for (let i = 0; i <= 9; i++) {
-                dead[i] = false;
-                console.log(dead[i], i);
-            }
-            let dead1 = false;
-            let dead2 = false;
-            let dead3 = false;
-            let dead4 = false;
-            let dead5 = false;
-            let dead6 = false;
-            let dead7 = false;
-            let dead8 = false;
-            let dead9 = false;
-            let dead11 = false;
-            let dead12 = false;
-            let dead13 = false;
-            let dead14 = false;
-            let dead15 = false;
-            let dead16 = false;
-            let dead17 = false;
-            let dead18 = false;
-            let dead19 = false;
+            let dead = false;
+            
 
                 if(event.code === 'KeyS') {
                     tecla = 1;
+            
+                    dead = game.checkDead(game.player, tecla);
                     
-                    for(let i = 0; i <= 9; i++) {
-                        dead[i] = game.player.checkExplosion(tecla, game.explosion[i]);
-                    }
-
-                    // dead1 = game.player.checkExplosion(tecla, game.explosion1);
-                    // dead2 = game.player.checkExplosion(tecla, game.explosion2);
-                    // dead3 = game.player.checkExplosion(tecla, game.explosion3);
-                    // dead4 = game.player.checkExplosion(tecla, game.explosion4);
-                    // dead5 = game.player.checkExplosion(tecla, game.explosion5);
-                    // dead6 = game.player.checkExplosion(tecla, game.explosion6);
-                    // dead7 = game.player.checkExplosion(tecla, game.explosion7);
-                    // dead8 = game.player.checkExplosion(tecla, game.explosion8);
-                    // dead9 = game.player.checkExplosion(tecla, game.explosion9);
-                    // dead11 = game.player.checkExplosion(tecla, game.explosion11);
-                    // dead12 = game.player.checkExplosion(tecla, game.explosion12);
-                    // dead13 = game.player.checkExplosion(tecla, game.explosion13);
-                    // dead14 = game.player.checkExplosion(tecla, game.explosion14);
-                    // dead15 = game.player.checkExplosion(tecla, game.explosion15);
-                    // dead16 = game.player.checkExplosion(tecla, game.explosion16);
-                    // dead17 = game.player.checkExplosion(tecla, game.explosion17);
-                    // dead18 = game.player.checkExplosion(tecla, game.explosion18);
-                    // dead19 = game.player.checkExplosion(tecla, game.explosion19);
-                    
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
-                    }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    } 
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -120,31 +75,12 @@ const main = () => {
                 if(event.code === 'KeyW') {
                     tecla = 2;
 
-                    dead1 = game.player.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -161,31 +97,12 @@ const main = () => {
                 if(event.code === 'KeyD') {
                     tecla = 3;
 
-                    dead1 = game.player.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -202,31 +119,12 @@ const main = () => {
                 if(event.code === 'KeyA') {
                     tecla = 4;
 
-                    dead1 = game.player.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -257,53 +155,18 @@ const main = () => {
             let tecla = 0;
             game.player2.speed = 50;
             let collision = false;
-            let dead1 = false;
-            let dead2 = false;
-            let dead3 = false;
-            let dead4 = false;
-            let dead5 = false;
-            let dead6 = false;
-            let dead7 = false;
-            let dead8 = false;
-            let dead9 = false;
-            let dead11 = false;
-            let dead12 = false;
-            let dead13 = false;
-            let dead14 = false;
-            let dead15 = false;
-            let dead16 = false;
-            let dead17 = false;
-            let dead18 = false;
-            let dead19 = false;
+            let dead = false;
     
                 if(event.code === 'ArrowDown') {
                     tecla = 1;
 
-                    dead1 = game.player2.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player2.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player2.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player2.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player2.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player2.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player2.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player2.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player2.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player2, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -322,31 +185,12 @@ const main = () => {
                 if(event.code === 'ArrowUp') {
                     tecla = 2;
 
-                    dead1 = game.player2.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player2.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player2.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player2.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player2.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player2.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player2.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player2.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player2.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player2, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -363,31 +207,12 @@ const main = () => {
                 if(event.code === 'ArrowRight') {
                     tecla = 3;
 
-                    dead1 = game.player2.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player2.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player2.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player2.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player2.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player2.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player2.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player2.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player2.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player2, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
@@ -404,31 +229,12 @@ const main = () => {
                 if(event.code === 'ArrowLeft') {
                     tecla = 4;
 
-                    dead1 = game.player2.checkExplosion(tecla, game.explosion1);
-                    dead2 = game.player2.checkExplosion(tecla, game.explosion2);
-                    dead3 = game.player2.checkExplosion(tecla, game.explosion3);
-                    dead4 = game.player2.checkExplosion(tecla, game.explosion4);
-                    dead5 = game.player2.checkExplosion(tecla, game.explosion5);
-                    dead6 = game.player2.checkExplosion(tecla, game.explosion6);
-                    dead7 = game.player2.checkExplosion(tecla, game.explosion7);
-                    dead8 = game.player2.checkExplosion(tecla, game.explosion8);
-                    dead9 = game.player2.checkExplosion(tecla, game.explosion9);
-                    dead11 = game.player2.checkExplosion(tecla, game.explosion11);
-                    dead12 = game.player2.checkExplosion(tecla, game.explosion12);
-                    dead13 = game.player2.checkExplosion(tecla, game.explosion13);
-                    dead14 = game.player2.checkExplosion(tecla, game.explosion14);
-                    dead15 = game.player2.checkExplosion(tecla, game.explosion15);
-                    dead16 = game.player2.checkExplosion(tecla, game.explosion16);
-                    dead17 = game.player2.checkExplosion(tecla, game.explosion17);
-                    dead18 = game.player2.checkExplosion(tecla, game.explosion18);
-                    dead19 = game.player2.checkExplosion(tecla, game.explosion19);
+                    dead = game.checkDead(game.player2, tecla);
                     
-                    if(dead1 || dead2 || dead3 || dead4 || dead5 || dead6 || dead7 || dead8 || dead9){
+                    if(dead){
                         buildSplashScreen();
                     }
-                    if(dead11 || dead12 || dead13 || dead14 || dead15 || dead16 || dead17 || dead18 || dead19){
-                        buildSplashScreen();
-                    }
+                    
 
                     game.wall.forEach(l => {
                         l.forEach(e => {
