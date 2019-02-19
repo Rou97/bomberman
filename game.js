@@ -11,7 +11,8 @@ class Game{
         this.bomb1;
         this.bomb2;
         this.bomb3;
-        this.bombs = [];
+        this.player1Bombs = [];
+        this.player2Bombs = [];
         this.explosion1;
         this.explosion2;
         this.explosion3;
@@ -21,16 +22,7 @@ class Game{
         this.explosion7;
         this.explosion8;
         this.explosion9;
-        this.explosion11;
-        this.explosion12;
-        this.explosion13;
-        this.explosion14;
-        this.explosion15;
-        this.explosion16;
-        this.explosion17;
-        this.explosion18;
-        this.explosion19;
-        this.explosions = [];
+    
     };
 
     startLoop() {
@@ -79,61 +71,50 @@ class Game{
     };
 
     buildBomb() {
-        if (this.bomb === undefined) {
-            this.bomb = new Bomb(this.canvas, this.player.x, this.player.y);
+        if(this.player1Bombs.length <= 0 )  {
+            this.player1Bombs.push(new Bomb(this.canvas, this.player.x, this.player.y));
+            console.log(this.player1Bombs.length);
+        }
+    }
+    //     if (this.bomb === undefined) {
+    //         this.bomb = new Bomb(this.canvas, this.player.x, this.player.y);
 
-            setTimeout(() => {
+    //         setTimeout(() => {
 
-                this.checkWall(this.bomb);
-
-                delete this.bomb;                  
-                
-                //eliminar explosion
+    //             this.checkWall(this.bomb);
+    //             delete this.bomb;                  
     
-                setTimeout(() => {
+    //             setTimeout(() => {
 
-                    this.deleteExplosions();   
+    //                 this.deleteExplosions();   
     
-                }, 1000); 
+    //             }, 1000); 
     
-            }, 2000); 
+    //         }, 2000); 
             
 
-        } else {
-        //if (this.bomb != undefined && this.bomb1 === undefined) {
-            this.bomb1 = new Bomb(this.canvas, this.player.x, this.player.y);
+    //     } else {
+    //         this.bomb1 = new Bomb(this.canvas, this.player.x, this.player.y);
 
-            setTimeout(() => {
+    //         setTimeout(() => {
     
-                this.checkWall(this.bomb1);
-
-                //1
-    
-                // this.explosion1 = this.bomb1.explosion1();
-                // this.explosion2 = this.bomb1.explosion2();
-                // this.explosion3 = this.bomb1.explosion3();
-                // this.explosion4 = this.bomb1.explosion4();
-                // this.explosion5 = this.bomb1.explosion5();
-                // this.explosion6 = this.bomb1.explosion6();
-                // this.explosion7 = this.bomb1.explosion7();
-                // this.explosion8 = this.bomb1.explosion8();
-                // this.explosion9 = this.bomb1.explosion9();
-                delete this.bomb1;                   
+    //             this.checkWall(this.bomb1);
+    //             delete this.bomb1;                   
                 
-                //eliminar explosion
+    //             //eliminar explosion
     
-                setTimeout(() => {
+    //             setTimeout(() => {
 
-                    this.deleteExplosions();   
+    //                 this.deleteExplosions();   
                     
-                }, 1000); //modificar
+    //             }, 1000); 
     
     
-            }, 2000); //modificar
+    //         }, 2000); 
 
-        }   
+    //     }   
 
-    }
+    // }
 
     buildBomb2() {
         if(this.bomb2 === undefined) {
@@ -183,10 +164,10 @@ class Game{
                     
                     this.deleteExplosions();   
     
-                }, 1000); //modificar
+                }, 1000); 
     
     
-            }, 2000); //modificar
+            }, 2000); 
 
         }
 
@@ -241,36 +222,6 @@ class Game{
         if(this.explosion9) {
             this.explosion9.draw1();
         }
-
-        //Draw of the 9 explosions of 1st bomb of 2nd player
-        if(this.explosion11) {
-            this.explosion11.draw1();
-        }
-        if(this.explosion12) {
-            this.explosion12.draw1();
-        }
-        if(this.explosion13) {
-            this.explosion13.draw1();
-        }
-        if(this.explosion14) {
-            this.explosion14.draw1();
-        }
-        if(this.explosion15) {
-            this.explosion15.draw1();
-        }
-        if(this.explosion16) {
-            this.explosion16.draw1();
-        }
-        if(this.explosion17) {
-            this.explosion17.draw1();
-        }
-        if(this.explosion18) {
-            this.explosion18.draw1();
-        }
-        if(this.explosion19) {
-            this.explosion19.draw1();
-        }
-
         
     };
 
@@ -281,36 +232,36 @@ class Game{
             this.explosion5 = bomb.explosion5();
             this.explosion8 = bomb.explosion8();
             this.explosion9 = bomb.explosion9();
-        } else if (this.bomb.x === 50 && this.bomb.y === 450) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion4 = this.bomb.explosion4();
-            this.explosion5 = this.bomb.explosion5();
-            this.explosion6 = this.bomb.explosion6();
-            this.explosion7 = this.bomb.explosion7();
-        } else if(this.bomb.x === 50 && this.bomb.y === 100) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion6 = this.bomb.explosion6();
-            this.explosion8 = this.bomb.explosion8();
-            this.explosion9 = this.bomb.explosion9();
-        } else if(this.bomb.x === 50 && this.bomb.y === 400) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion6 = this.bomb.explosion6();
-            this.explosion7 = this.bomb.explosion7();
-            this.explosion8 = this.bomb.explosion8();
-        } else if (this.bomb.x === 50 && (this.bomb.y === 200 || this.bomb.y === 300)) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion6 = this.bomb.explosion6();
-            this.explosion7 = this.bomb.explosion7();
-            this.explosion8 = this.bomb.explosion8();
-            this.explosion9 = this.bomb.explosion9();
-        } else if(this.bomb.x === 50) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion4 = this.bomb.explosion4();
-            this.explosion5 = this.bomb.explosion5();
-            this.explosion6 = this.bomb.explosion6();
-            this.explosion7 = this.bomb.explosion7();
-            this.explosion8 = this.bomb.explosion8();
-            this.explosion9 = this.bomb.explosion9();
+        } else if (bomb.x === 50 && bomb.y === 450) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion4 = bomb.explosion4();
+            this.explosion5 = bomb.explosion5();
+            this.explosion6 = bomb.explosion6();
+            this.explosion7 = bomb.explosion7();
+        } else if(bomb.x === 50 && bomb.y === 100) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion6 = bomb.explosion6();
+            this.explosion8 = bomb.explosion8();
+            this.explosion9 = bomb.explosion9();
+        } else if(bomb.x === 50 && bomb.y === 400) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion6 = bomb.explosion6();
+            this.explosion7 = bomb.explosion7();
+            this.explosion8 = bomb.explosion8();
+        } else if (bomb.x === 50 && (bomb.y === 200 || bomb.y === 300)) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion6 = bomb.explosion6();
+            this.explosion7 = bomb.explosion7();
+            this.explosion8 = bomb.explosion8();
+            this.explosion9 = bomb.explosion9();
+        } else if(bomb.x === 50) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion4 = bomb.explosion4();
+            this.explosion5 = bomb.explosion5();
+            this.explosion6 = bomb.explosion6();
+            this.explosion7 = bomb.explosion7();
+            this.explosion8 = bomb.explosion8();
+            this.explosion9 = bomb.explosion9();
         }
 
         if(this.bomb.x === 450 && this.bomb.y === 50) {
@@ -465,71 +416,7 @@ class Game{
             this.explosion7 = this.bomb.explosion7();
             this.explosion8 = this.bomb.explosion8();
             this.explosion9 = this.bomb.explosion9();
-        }
-        
-        
-        
-
-        
-        // if(this.player.x === 50 && this.player.y != 50) {
-        //     //2y3
-        //     // this.explosion1 = this.bomb.explosion1();
-        //     // this.explosion4 = this.bomb.explosion4();
-        //     // this.explosion5 = this.bomb.explosion5();
-        //     // this.explosion6 = this.bomb.explosion6();
-        //     // this.explosion7 = this.bomb.explosion7();
-        //     // this.explosion8 = this.bomb.explosion8();
-        //     // this.explosion9 = this.bomb.explosion9();
-        // }
-        // if(this.player.y === 50) {
-        //     //6y7
-        //     this.explosion1 = this.bomb.explosion1();
-        //     this.explosion2 = this.bomb.explosion2();
-        //     this.explosion3 = this.bomb.explosion3();
-        //     this.explosion4 = this.bomb.explosion4();
-        //     this.explosion5 = this.bomb.explosion5();
-        //     this.explosion8 = this.bomb.explosion8();
-        //     this.explosion9 = this.bomb.explosion9();
-        // }
-        // if(this.player.x === 450) {
-        //     //4y5
-        //     this.explosion1 = this.bomb.explosion1();
-        //     this.explosion2 = this.bomb.explosion2();
-        //     this.explosion3 = this.bomb.explosion3();
-        //     this.explosion6 = this.bomb.explosion6();
-        //     this.explosion7 = this.bomb.explosion7();
-        //     this.explosion8 = this.bomb.explosion8();
-        //     this.explosion9 = this.bomb.explosion9();
-        // }
-        // if(this.player.y === 450) {
-        //     //8y9
-        //     this.explosion1 = this.bomb.explosion1();
-        //     this.explosion2 = this.bomb.explosion2();
-        //     this.explosion3 = this.bomb.explosion3();
-        //     this.explosion4 = this.bomb.explosion4();
-        //     this.explosion5 = this.bomb.explosion5();
-        //     this.explosion6 = this.bomb.explosion6();
-        //     this.explosion7 = this.bomb.explosion7();
-        // }
-        // if((this.player.y === 100 || this.player.y === 200 || this.player.y === 300 || this.player.y === 400) && (this.player.x === 50 || this.player.x === 150 || this.player.x === 250 || this.player.x === 350 || this.player.x === 450 )) {
-        //     //2y3y4y5
-        //     this.explosion1 = this.bomb.explosion1();
-        //     this.explosion6 = this.bomb.explosion6();
-        //     this.explosion7 = this.bomb.explosion7();
-        //     this.explosion8 = this.bomb.explosion8();
-        //     this.explosion9 = this.bomb.explosion9();
-
-            
-
-        // }
-        // if((this.player.x === 100 || this.player.x === 200 || this.player.x === 300 || this.player.x === 400) && (this.player.y === 50 || this.player.y === 150 || this.player.y === 250 || this.player.y === 350 || this.player.y === 450 )) {
-        //     //6y7y8y9
-        //     this.explosion1 = this.bomb.explosion1();
-        //     this.explosion2 = this.bomb.explosion2();
-        //     this.explosion3 = this.bomb.explosion3();
-        //     this.explosion4 = this.bomb.explosion4();
-        //     this.explosion5 = this.bomb.explosion5();
-        // }             
+        }            
  
     }
 
