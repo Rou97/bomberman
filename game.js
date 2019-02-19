@@ -78,8 +78,8 @@ class Game{
         if(this.player1Bombs[0] != undefined) {
             setTimeout(() => {
 
-                this.checkWall(this.player1Bombs[0]);
-                delete this.player1Bombs[0];                  
+                this.checkWall(this.player1Bombs[0]);        
+                this.player1Bombs.splice(0,1);        
     
                 setTimeout(() => {
 
