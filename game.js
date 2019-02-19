@@ -71,15 +71,15 @@ class Game{
     };
 
     buildBomb() {
-        if(this.player1Bombs.length <= 1 )  {
+        if(this.player1Bombs.length === 0 || this.player1Bombs.length === 1)  {
             this.player1Bombs.push(new Bomb(this.canvas, this.player.x, this.player.y));
             console.log(this.player1Bombs.length);
-        }
-        if(this.player1Bombs[0] != undefined) {
-            setTimeout(() => {
 
-                this.checkWall(this.player1Bombs[0]);        
-                this.player1Bombs.splice(0,1);        
+            setTimeout(() => {
+                this.player1Bombs.forEach((bomb, index) => {
+                    this.checkWall(bomb);        
+                    this.player1Bombs.splice(index,1);        
+                })
     
                 setTimeout(() => {
 
@@ -89,6 +89,39 @@ class Game{
     
             }, 2000); 
         }
+        // } else if (this.player1Bombs.length === 1) {
+        //     this.player1Bombs.push(new Bomb(this.canvas, this.player.x, this.player.y));
+        //     console.log(this.player1Bombs.length);
+
+        //     setTimeout(() => {
+
+        //         this.checkWall(this.player1Bombs[0]);        
+        //         this.player1Bombs.splice(0,1);        
+    
+        //         setTimeout(() => {
+
+        //             this.deleteExplosions();   
+    
+        //         }, 1000); 
+    
+        //     }, 2000); 
+        // }
+
+
+        // if(this.player1Bombs[0] != undefined) {
+        //     setTimeout(() => {
+
+        //         this.checkWall(this.player1Bombs[0]);        
+        //         this.player1Bombs.splice(0,1);        
+    
+        //         setTimeout(() => {
+
+        //             this.deleteExplosions();   
+    
+        //         }, 1000); 
+    
+        //     }, 2000); 
+        // }
     }
     //     if (this.bomb === undefined) {
     //         this.bomb = new Bomb(this.canvas, this.player.x, this.player.y);
@@ -200,6 +233,9 @@ class Game{
         if(this.player1Bombs[0]) {
             this.player1Bombs[0].draw();
         }
+        if(this.player1Bombs[1]) {
+            this.player1Bombs[1].draw();
+        }
 
         //obsoleto
         if(this.bomb) {
@@ -307,7 +343,7 @@ class Game{
             this.explosion6 = bomb.explosion6();
             this.explosion7 = bomb.explosion7();
             this.explosion8 = bomb.explosion8();
-        } else if (bomb.x === 450 && (bomb.y === 200 || this.bomb.y === 300)) {
+        } else if (bomb.x === 450 && (bomb.y === 200 || bomb.y === 300)) {
             this.explosion1 = bomb.explosion1();
             this.explosion6 = bomb.explosion6();
             this.explosion7 = bomb.explosion7();
