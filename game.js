@@ -89,136 +89,30 @@ class Game{
     
             }, 2000); 
         }
-        // } else if (this.player1Bombs.length === 1) {
-        //     this.player1Bombs.push(new Bomb(this.canvas, this.player.x, this.player.y));
-        //     console.log(this.player1Bombs.length);
-
-        //     setTimeout(() => {
-
-        //         this.checkWall(this.player1Bombs[0]);        
-        //         this.player1Bombs.splice(0,1);        
-    
-        //         setTimeout(() => {
-
-        //             this.deleteExplosions();   
-    
-        //         }, 1000); 
-    
-        //     }, 2000); 
-        // }
-
-
-        // if(this.player1Bombs[0] != undefined) {
-        //     setTimeout(() => {
-
-        //         this.checkWall(this.player1Bombs[0]);        
-        //         this.player1Bombs.splice(0,1);        
-    
-        //         setTimeout(() => {
-
-        //             this.deleteExplosions();   
-    
-        //         }, 1000); 
-    
-        //     }, 2000); 
-        // }
     }
-    //     if (this.bomb === undefined) {
-    //         this.bomb = new Bomb(this.canvas, this.player.x, this.player.y);
-
-    //         setTimeout(() => {
-
-    //             this.checkWall(this.bomb);
-    //             delete this.bomb;                  
-    
-    //             setTimeout(() => {
-
-    //                 this.deleteExplosions();   
-    
-    //             }, 1000); 
-    
-    //         }, 2000); 
-            
-
-    //     } else {
-    //         this.bomb1 = new Bomb(this.canvas, this.player.x, this.player.y);
-
-    //         setTimeout(() => {
-    
-    //             this.checkWall(this.bomb1);
-    //             delete this.bomb1;                   
-                
-    //             //eliminar explosion
-    
-    //             setTimeout(() => {
-
-    //                 this.deleteExplosions();   
-                    
-    //             }, 1000); 
-    
-    
-    //         }, 2000); 
-
-    //     }   
-
-    // }
 
     buildBomb2() {
-        if(this.bomb2 === undefined) {
-            this.bomb2 = new Bomb(this.canvas, this.player2.x, this.player2.y);
+        if(this.player2Bombs.length === 0 || this.player2Bombs.length === 1)  {
+            this.player2Bombs.push(new Bomb(this.canvas, this.player2.x, this.player2.y));
+            console.log(this.player2Bombs.length);
 
             setTimeout(() => {
-                this.explosion1 = this.bomb2.explosion1();
-                this.explosion2 = this.bomb2.explosion2();
-                this.explosion3 = this.bomb2.explosion3();
-                this.explosion4 = this.bomb2.explosion4();
-                this.explosion5 = this.bomb2.explosion5();
-                this.explosion6 = this.bomb2.explosion6();
-                this.explosion7 = this.bomb2.explosion7();
-                this.explosion8 = this.bomb2.explosion8();
-                this.explosion9 = this.bomb2.explosion9();
-                delete this.bomb2;                   
-                
-                //eliminar explosion
+                this.player2Bombs.forEach((bomb, index) => {
+                    this.checkWall(bomb);        
+                    this.player2Bombs.splice(index,1);        
+                })
     
                 setTimeout(() => {
-                
-                    this.deleteExplosions();       
-    
-                }, 1000); //modificar
-    
-    
-            }, 2000); //modificar
 
-        } else {
-            this.bomb3 = new Bomb(this.canvas, this.player2.x, this.player2.y);
-
-            setTimeout(() => {
-                this.explosion1 = this.bomb3.explosion1();
-                this.explosion2 = this.bomb3.explosion2();
-                this.explosion3 = this.bomb3.explosion3();
-                this.explosion4 = this.bomb3.explosion4();
-                this.explosion5 = this.bomb3.explosion5();
-                this.explosion6 = this.bomb3.explosion6();
-                this.explosion7 = this.bomb3.explosion7();
-                this.explosion8 = this.bomb3.explosion8();
-                this.explosion9 = this.bomb3.explosion9();
-                delete this.bomb3;                   
-                
-                //eliminar explosion
-    
-                setTimeout(() => {
-                    
                     this.deleteExplosions();   
     
                 }, 1000); 
     
-    
             }, 2000); 
-
         }
-
     }
+
+    
 
     drawCanvas() {
         this.player.draw();
@@ -229,12 +123,20 @@ class Game{
             })
         })
 
-        //Bombas
+        //Bombs 1st player
         if(this.player1Bombs[0]) {
             this.player1Bombs[0].draw();
         }
         if(this.player1Bombs[1]) {
             this.player1Bombs[1].draw();
+        }
+
+        //Bombs 2nd player
+        if(this.player2Bombs[0]) {
+            this.player2Bombs[0].draw();
+        }
+        if(this.player2Bombs[1]) {
+            this.player2Bombs[1].draw();
         }
 
         //obsoleto

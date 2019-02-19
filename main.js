@@ -246,7 +246,7 @@ const main = () => {
 
         const player2Actions = (event) => {
             let tecla = 0;
-            game.player2.speed = 25;
+            game.player2.speed = 50;
             let collision = false;
             let dead1 = false;
             let dead2 = false;
