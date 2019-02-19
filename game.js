@@ -84,7 +84,7 @@ class Game{
 
             setTimeout(() => {
 
-                this.checkWall();
+                this.checkWall(this.bomb);
 
                 delete this.bomb;                  
                 
@@ -105,17 +105,19 @@ class Game{
 
             setTimeout(() => {
     
+                this.checkWall(this.bomb1);
+
                 //1
     
-                this.explosion1 = this.bomb1.explosion1();
-                this.explosion2 = this.bomb1.explosion2();
-                this.explosion3 = this.bomb1.explosion3();
-                this.explosion4 = this.bomb1.explosion4();
-                this.explosion5 = this.bomb1.explosion5();
-                this.explosion6 = this.bomb1.explosion6();
-                this.explosion7 = this.bomb1.explosion7();
-                this.explosion8 = this.bomb1.explosion8();
-                this.explosion9 = this.bomb1.explosion9();
+                // this.explosion1 = this.bomb1.explosion1();
+                // this.explosion2 = this.bomb1.explosion2();
+                // this.explosion3 = this.bomb1.explosion3();
+                // this.explosion4 = this.bomb1.explosion4();
+                // this.explosion5 = this.bomb1.explosion5();
+                // this.explosion6 = this.bomb1.explosion6();
+                // this.explosion7 = this.bomb1.explosion7();
+                // this.explosion8 = this.bomb1.explosion8();
+                // this.explosion9 = this.bomb1.explosion9();
                 delete this.bomb1;                   
                 
                 //eliminar explosion
@@ -272,13 +274,13 @@ class Game{
         
     };
 
-    checkWall() {
-        if(this.bomb.x === 50 && this.bomb.y === 50) {
-            this.explosion1 = this.bomb.explosion1();
-            this.explosion4 = this.bomb.explosion4();
-            this.explosion5 = this.bomb.explosion5();
-            this.explosion8 = this.bomb.explosion8();
-            this.explosion9 = this.bomb.explosion9();
+    checkWall(bomb) {
+        if(bomb.x === 50 && bomb.y === 50) {
+            this.explosion1 = bomb.explosion1();
+            this.explosion4 = bomb.explosion4();
+            this.explosion5 = bomb.explosion5();
+            this.explosion8 = bomb.explosion8();
+            this.explosion9 = bomb.explosion9();
         } else if (this.bomb.x === 50 && this.bomb.y === 450) {
             this.explosion1 = this.bomb.explosion1();
             this.explosion4 = this.bomb.explosion4();
@@ -348,6 +350,123 @@ class Game{
             this.explosion8 = this.bomb.explosion8();
             this.explosion9 = this.bomb.explosion9();
         }
+
+        if(this.bomb.y === 50 && this.bomb.x === 50) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+            this.explosion8 = this.bomb.explosion8();
+            this.explosion9 = this.bomb.explosion9();
+        } else if(this.bomb.y === 50 && this.bomb.x === 100) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        } else if(this.bomb.y === 50 && this.bomb.x === 400) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+        } else if (this.bomb.y === 50 && (this.bomb.x === 200 || this.bomb.x === 300)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        } else if(this.bomb.y === 50 && (this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+            this.explosion8 = this.bomb.explosion8();
+            this.explosion9 = this.bomb.explosion9();
+        }
+
+        if(this.bomb.y === 450 && this.bomb.x === 50) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion7 = this.bomb.explosion7();
+        } else if(this.bomb.y === 450 && this.bomb.x === 100) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        } else if(this.bomb.y === 450 && this.bomb.x === 400) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+        } else if (this.bomb.y === 450 && (this.bomb.x === 200 || this.bomb.x === 300)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        } else if(this.bomb.y === 450 && (this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion7 = this.bomb.explosion7();
+        }
+
+        if(this.bomb.y === 100 && (this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion8 = this.bomb.explosion8();
+            this.explosion9 = this.bomb.explosion9();
+        } else if (this.bomb.y === 400 && (this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion7 = this.bomb.explosion7();
+            this.explosion8 = this.bomb.explosion8();
+        }
+
+        if(this.bomb.x === 100 && (this.bomb.y === 150 || this.bomb.y === 250 || this.bomb.y === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        } else if (this.bomb.x === 400 && (this.bomb.y === 150 || this.bomb.y === 250 || this.bomb.y === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+        }
+
+        if((this.bomb.y === 200 || this.bomb.y === 300) && (this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion7 = this.bomb.explosion7();
+            this.explosion8 = this.bomb.explosion8();
+            this.explosion9 = this.bomb.explosion9();
+        }
+
+        if((this.bomb.x === 200 || this.bomb.x === 300) && (this.bomb.y === 150 || this.bomb.y === 250 || this.bomb.y === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+        }
+
+        if((this.bomb.x === 150 || this.bomb.x === 250 || this.bomb.x === 350) && (this.bomb.y === 150 || this.bomb.y === 250 || this.bomb.y === 350)) {
+            this.explosion1 = this.bomb.explosion1();
+            this.explosion2 = this.bomb.explosion2();
+            this.explosion3 = this.bomb.explosion3();
+            this.explosion4 = this.bomb.explosion4();
+            this.explosion5 = this.bomb.explosion5();
+            this.explosion6 = this.bomb.explosion6();
+            this.explosion7 = this.bomb.explosion7();
+            this.explosion8 = this.bomb.explosion8();
+            this.explosion9 = this.bomb.explosion9();
+        }
+        
         
         
 
