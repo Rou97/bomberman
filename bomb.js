@@ -9,6 +9,7 @@ class Bomb{
         this.y = y;
         this.color = "red";
         this.explos = false;
+        this.explosion = []; 
     };
 
     draw() {

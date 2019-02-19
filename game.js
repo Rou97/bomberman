@@ -31,6 +31,11 @@ class Game{
         this.player = new Player(this.canvas, 100, 50, 1);
         this.player2 = new Player(this.canvas, 350, 450, 1);
 
+        //Explosions
+        for(let i = 0; i<=0; i++) {
+            
+        }
+
         //wall
         for (let i = 0; i < 11; i++) {
             this.wall[i] = [];
