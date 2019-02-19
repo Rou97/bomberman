@@ -404,7 +404,7 @@ class Game{
             this.explosion2 = bomb.explosion2();
             this.explosion4 = bomb.explosion4();
             this.explosion5 = bomb.explosion5();
-        } else if (bomb.x === 400 && (bomb.y === 150 ||.bomb.y === 250 || bomb.y === 350)) {
+        } else if (bomb.x === 400 && (bomb.y === 150 ||bomb.y === 250 || bomb.y === 350)) {
             this.explosion1 = bomb.explosion1();
             this.explosion2 = bomb.explosion2();
             this.explosion3 = bomb.explosion3();
