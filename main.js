@@ -44,7 +44,7 @@ const main = () => {
 
         const playerActions = (event) => {
             let tecla = 0;
-            game.player.speed = 25;
+            game.player.speed = 50;
             let collision = false;
             let dead1 = false;
             let dead2 = false;
