@@ -1,7 +1,7 @@
 'use strict'
 
 class Player{
-    constructor(canvas, x, y, lives) {
+    constructor(canvas, x, y, lives, color) {
         this.size = 50;
         this.canvas = canvas;
         this.ctx = this.canvas.getContext('2d');
@@ -10,11 +10,12 @@ class Player{
         this.speed = 0;
         this.direction = 0;
         this.lives = lives;
+        this.color = color;
     };
 
 
     draw() {
-        this.ctx.fillStyle = "green";
+        this.ctx.fillStyle = this.color;
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }
 

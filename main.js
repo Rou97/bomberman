@@ -13,8 +13,10 @@ const main = () => {
     const buildSplashScreen = () => {
         const splashScreen = buildDom(`
             <section class="splash-screen">
-                <h1>Bomberman</h1>
-                <button>Start</button>
+                <container>
+                    <h1>Bomberman</h1>
+                    <button>Start</button>
+                </container>
             </section>
         `);
         const startButton = document.querySelector('button');
@@ -23,10 +25,65 @@ const main = () => {
 
     const buildGameScreen = () => {
         const gameScreen = buildDom(`
-            <section class="game-screen">
-                <canvas></canvas>
-            </section>
+            <div class="caja">
+                <section class="animation1">
+                    <span>
+                    </span>
+                </section>
+                <section class="game-screen">
+                    <canvas></canvas>
+                </section>  
+                <section class="animation2">
+                    <span>
+                    </span>
+                </section> 
+            </div>
+            <div class="caja2">
+                <section class="player1">
+                        <h1>Player 1</h1>
+                        <p>
+                        Move up: W
+                        Move down: S
+                        Move left: A
+                        Move right: D
+                        Drop bomb: Space
+                        </p>
+                    </section>
+                    <section class="player2">
+                        <h1>Player 2</h1>
+                        <p>
+                            Move up: Arrow up
+                            Move down: Arrow down
+                            Move left: Arrow left
+                            Move right: Arrow right
+                            Drop bomb: .
+                        </p>
+                </section>
+            </div>
         `);
+
+        /*
+        <section class="player1">
+                    <h1>Player 1</h1>
+                    <p>
+                    Move up: W
+                    Move down: S
+                    Move left: A
+                    Move right: D
+                    Drop bomb: Space
+                    </p>
+                </section>
+                <section class="player2">
+                    <h1>Player 2</h1>
+                    <p>
+                        Move up: Arrow up
+                        Move down: Arrow down
+                        Move left: Arrow left
+                        Move right: Arrow right
+                        Drop bomb: .
+                    </p>
+                </section>
+        */
 
         const width = document.querySelector('.game-screen').offsetWidth;
         const height = document.querySelector('.game-screen').offsetHeight;

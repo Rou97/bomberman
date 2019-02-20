@@ -23,8 +23,8 @@ class Game{
     startLoop() {
 
         //Players
-        this.player = new Player(this.canvas, 100, 50, 1);
-        this.player2 = new Player(this.canvas, 350, 450, 1);
+        this.player = new Player(this.canvas, 100, 50, 1, 'green');
+        this.player2 = new Player(this.canvas, 350, 450, 1, 'blue');
 
         
 
