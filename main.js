@@ -26,16 +26,32 @@ const main = () => {
     const buildGameScreen = () => {
         const gameScreen = buildDom(`
             <div class="caja">
+            
                 <section class="animation1">
-                    <span>
-                    </span>
+                    <div class="eye1">
+                        <div class="eye11"></div>
+                    </div>
+                    <div class="eye2">
+                        <div class="eye22"></div>
+                    </div>
+                    <div class="mouth"></div>
                 </section>
+
                 <section class="game-screen">
                     <canvas></canvas>
                 </section>  
                 <section class="animation2">
-                    <span>
-                    </span>
+                    
+                    <div class="eye3">
+                        <div class="eye11"></div>
+                     </div>
+                    <div class="eye4">
+                        <div class="eye22"></div>
+                    </div>
+                    <div class="mouth2"></div>
+
+
+
                 </section> 
             </div>
             <div class="caja2">

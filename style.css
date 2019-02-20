@@ -12,10 +12,7 @@ html {
     padding: 0;
   }
 
-  div {
-    margin: 0;
-    padding: 0;
-  }
+  
   
   
   /* ---- typography ---- */
@@ -68,21 +65,21 @@ html {
   }
 
   .animation1 {
-    background-color: red;
+    background-color: green;
     width: 33.33%;
     height: 550px;
   }
 
   .animation2 {
     background-color: blue;
-    width: 33.33%;
+    width: 34%;
     height: 550px; 
   }
 
   .caja2 {
     display: flex;
     top: 550px;
-    height: 100vh;
+    height: 38.8vh;
   }
 
   .player1 {
@@ -96,4 +93,119 @@ html {
     width: 50%;
     text-align: center;
   }
+
+  .eye1 {
+    position: absolute;
+    width: 80px; 
+    height: 80px;
+    top: 150px;
+    left: 80px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .eye2 {
+    position: absolute;
+    width: 80px; 
+    height: 80px;
+    top: 150px;
+    left: 260px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .eye11 {
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    top: 25px;
+    left: 25px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .eye22 {
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    top: 25px;
+    left: 25px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .mouth {
+    position: relative;
+    width: 260px; 
+    height: 80px;
+    top: 300px;
+    left: 80px;
+    background-color: white;
+    margin: 0;
+    display: inline-block;
+    animation: open 3s infinite alternate;
+  }
   
+  @keyframes open {
+    0% {
+      height: 80px;
+      width: 260px;
+      left: 80px;
+      top: 300px;
+      border-radius: 0%;
+    }
+  
+    
+    100% {
+      height: 30px;
+      width: 30px;
+      left: 200px;
+      top: 320px;
+      border-radius: 50%;
+    }
+  }
+
+
+  .eye3 {
+    position: absolute;
+    width: 80px; 
+    height: 80px;
+    top: 150px;
+    left: 1080px;
+    background-color: white;
+    border-radius: 100%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .eye4 {
+    position: absolute;
+    width: 80px; 
+    height: 80px;
+    top: 150px;
+    left: 1260px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .mouth2 {
+    position: relative;
+    width: 260px; 
+    height: 80px;
+    top: 300px;
+    left: 80px;
+    background-color: white;
+    margin: 0;
+    display: inline-block;
+    animation: open 2s infinite alternate;
+  }
