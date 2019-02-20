@@ -1,5 +1,5 @@
 'use strict'
-
+//adadada
 class Wall{
     constructor(canvas, x, y) {
         this.size = 50;
