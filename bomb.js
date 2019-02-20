@@ -55,41 +55,4 @@ class Bomb{
         
     }
 
-    explosion11() {
-        return new Explosion(this.canvas, this.x, this.y);
-        
-    }
-    explosion12() {
-        return new Explosion(this.canvas, this.x - 50, this.y);
-        
-    }
-    explosion13() {
-        return new Explosion(this.canvas, this.x - 100, this.y);
-        
-    }
-    explosion14() {
-        return new Explosion(this.canvas, this.x + 50, this.y);
-        
-    }
-    explosion15() {
-        return new Explosion(this.canvas, this.x + 100, this.y);
-        
-    }
-    explosion16() {
-        return new Explosion(this.canvas, this.x, this.y - 50);
-        
-    }
-    explosion17() {
-        return new Explosion(this.canvas, this.x, this.y - 100);
-        
-    }
-    explosion18() {
-        return new Explosion(this.canvas, this.x, this.y + 50);
-        
-    }
-    explosion19() {
-        return new Explosion(this.canvas, this.x, this.y + 100);
-        
-    }
-
 }

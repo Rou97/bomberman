@@ -12,6 +12,7 @@ class Explosion {
     };
 
     draw1() {
+        
         this.ctx.fillStyle = "orange";
         this.ctx.fillRect(this.x, this.y, this.size, this.size)
     }

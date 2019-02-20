@@ -220,7 +220,7 @@ class Game{
             this.explosion9 = bomb.explosion9();
         }
 
-        if(bomb.x === 45 && bomb.y === 50) {
+        if(bomb.x === 450 && bomb.y === 50) {
             this.explosion1 = bomb.explosion1();
             this.explosion2 = bomb.explosion2();
             this.explosion3 = bomb.explosion3();
