@@ -83,13 +83,12 @@ html {
   }
 
   .player1 {
-    background-color: yellow;
+    background-color: greenyellow;
     width: 50%;
     text-align: center;
   }
-
   .player2 {
-    background-color: pink;
+    background-color: aquamarine;
     width: 50%;
     text-align: center;
   }
@@ -160,7 +159,7 @@ html {
       width: 260px;
       left: 80px;
       top: 300px;
-      border-radius: 0%;
+      border-radius: 25%;
     }
   
     
