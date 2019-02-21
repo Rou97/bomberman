@@ -40,6 +40,10 @@ html {
   
   /* ---- section ---- */
   
+  .container {
+    width: 1440px;
+  }
+
   .splash-screen {
     width: 100%;
     height: 100vh;
@@ -51,6 +55,7 @@ html {
 
   .caja {
     display: flex;
+    width: 1440px;
   }
 
   .game-screen {
@@ -66,13 +71,13 @@ html {
 
   .animation1 {
     background-color: green;
-    width: 33.33%;
+    width: 445px;
     height: 550px;
   }
 
   .animation2 {
     background-color: blue;
-    width: 34%;
+    width: 445px;
     height: 550px; 
   }
 
@@ -80,16 +85,17 @@ html {
     display: flex;
     top: 550px;
     height: 38.8vh;
+    width: 1440px;
   }
 
   .player1 {
     background-color: greenyellow;
-    width: 50%;
+    width: 720px;
     text-align: center;
   }
   .player2 {
     background-color: aquamarine;
-    width: 50%;
+    width: 720px;
     text-align: center;
   }
 
@@ -208,3 +214,6 @@ html {
     display: inline-block;
     animation: open 2s infinite alternate;
   }
+
+
+  

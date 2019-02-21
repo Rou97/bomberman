@@ -50,10 +50,9 @@ const main = () => {
                     </div>
                     <div class="mouth2"></div>
 
-
-
                 </section> 
             </div>
+            
             <div class="caja2">
                 <section class="player1">
                         <h1>Player 1</h1>
