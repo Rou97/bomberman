@@ -14,7 +14,6 @@ const main = () => {
         const splashScreen = buildDom(`
             <section class="splash-screen">
                 <container>
-                    <h1>Bomberman</h1>
                     <button>Start</button>
                 </container>
             </section>
@@ -52,53 +51,31 @@ const main = () => {
 
                 </section> 
             </div>
-            
+
             <div class="caja2">
                 <section class="player1">
                         <h1>Player 1</h1>
                         <p>
-                        Move up: W
-                        Move down: S
-                        Move left: A
-                        Move right: D
-                        Drop bomb: Space
+                        Move up: W <br>
+                        Move down: S <br>
+                        Move left: A <br>
+                        Move right: D <br>
+                        Drop bomb: Space 
                         </p>
                     </section>
                     <section class="player2">
                         <h1>Player 2</h1>
                         <p>
-                            Move up: Arrow up
-                            Move down: Arrow down
-                            Move left: Arrow left
-                            Move right: Arrow right
-                            Drop bomb: .
+                            Move up: Arrow up <br>
+                            Move down: Arrow down <br>
+                            Move left: Arrow left <br>
+                            Move right: Arrow right <br>
+                            Drop bomb: dot 
                         </p>
                 </section>
             </div>
         `);
 
-        /*
-        <section class="player1">
-                    <h1>Player 1</h1>
-                    <p>
-                    Move up: W
-                    Move down: S
-                    Move left: A
-                    Move right: D
-                    Drop bomb: Space
-                    </p>
-                </section>
-                <section class="player2">
-                    <h1>Player 2</h1>
-                    <p>
-                        Move up: Arrow up
-                        Move down: Arrow down
-                        Move left: Arrow left
-                        Move right: Arrow right
-                        Drop bomb: .
-                    </p>
-                </section>
-        */
 
         const width = document.querySelector('.game-screen').offsetWidth;
         const height = document.querySelector('.game-screen').offsetHeight;
@@ -127,7 +104,7 @@ const main = () => {
                     dead = game.checkDead(game.player, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     } 
 
                     game.wall.forEach(l => {
@@ -150,7 +127,7 @@ const main = () => {
                     dead = game.checkDead(game.player, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -172,7 +149,7 @@ const main = () => {
                     dead = game.checkDead(game.player, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -194,7 +171,7 @@ const main = () => {
                     dead = game.checkDead(game.player, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -235,7 +212,7 @@ const main = () => {
                     dead = game.checkDead(game.player2, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
                     
@@ -260,7 +237,7 @@ const main = () => {
                     dead = game.checkDead(game.player2, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -282,7 +259,7 @@ const main = () => {
                     dead = game.checkDead(game.player2, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -304,7 +281,7 @@ const main = () => {
                     dead = game.checkDead(game.player2, tecla);
                     
                     if(dead){
-                        buildSplashScreen();
+                        buildGameOver();
                     }
                     
 
@@ -340,7 +317,6 @@ const main = () => {
     const buildGameOver = () => {
         const gameOverScreen = buildDom(`
             <section class="game-over">
-                <h1>Game Over Screen</h1>
                 <button>Restart</button>
             </section>
         `);
