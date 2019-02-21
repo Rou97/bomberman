@@ -14,7 +14,7 @@ const main = () => {
         const splashScreen = buildDom(`
             <section class="splash-screen">
                 <container>
-                    <button>Start</button>
+                    <button class="sa">Start</button>
                 </container>
             </section>
         `);
@@ -317,7 +317,7 @@ const main = () => {
     const buildGameOver = () => {
         const gameOverScreen = buildDom(`
             <section class="game-over">
-                <button>Restart</button>
+                <button class="sa">Restart</button>
             </section>
         `);
 
